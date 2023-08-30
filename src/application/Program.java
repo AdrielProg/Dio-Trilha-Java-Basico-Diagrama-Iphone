@@ -95,6 +95,8 @@ public class Program {
 						System.out.println("Navegador da Internet:");
 						System.out.println("1. Fazer chamada");
 						System.out.println("2. Receber chamada");
+						System.out.println("3. Iniciar Correio de Voz");
+
 						System.out.println("0. Voltar");
 						
 

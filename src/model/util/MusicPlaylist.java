@@ -7,12 +7,12 @@ public class MusicPlaylist {
 
 	private String name;
 	private List<Music> playlist;
-	private Music music;
 
 	public MusicPlaylist() {
 		this.playlist = new ArrayList<>();
 	}
 
+	// contrutor para implementar adição de playlists personalizadas com nome;
 	public MusicPlaylist(String name) {
 		this.name = name;
 		this.playlist = new ArrayList<>();
@@ -32,14 +32,6 @@ public class MusicPlaylist {
 
 	public void setPlaylist(List<Music> playlist) {
 		this.playlist = playlist;
-	}
-
-	public Music getMusic() {
-		return music;
-	}
-
-	public void setMusic(Music music) {
-		this.music = music;
 	}
 
 	public void addMusic(String musicName, String artist) {

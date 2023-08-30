@@ -62,7 +62,7 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	public void selectMusic(MusicPlaylist musicPlaylist, Scanner sc) {
 
 		musicPlaylist.showMyPlaylistSong();
-		System.out.println("\nEscolha uma música para tocar: ");
+		System.out.println("\nEscolha uma música pelo nome para tocar: ");
 		sc.nextLine();
 		String musicToPlay = sc.nextLine();
 
