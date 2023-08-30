@@ -64,7 +64,7 @@ public class MusicPlaylist {
 	public List<Music> showMyPlaylistSong() {
 		List<Music> myPlaylist = new ArrayList<>();
 		if (!playlist.isEmpty()) {
-			System.out.println("------" + this.name + "-----");
+			System.out.println("------Músicas Disponiveis-----");
 			for (Music m : playlist) {
 				myPlaylist.add(m);
 				System.out.println(m.getName() + "-" + m.getArtist());
