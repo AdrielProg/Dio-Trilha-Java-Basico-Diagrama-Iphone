@@ -6,6 +6,7 @@ import model.util.MusicPlaylist;
 
 public interface MusicPlayer {
 	
+	
 	public void playSong();
 	
 	public void pauseMusic();

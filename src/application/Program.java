@@ -27,23 +27,23 @@ public class Program {
 					// Menu do Reprodutor de Música
 					while (true) {
 						System.out.println("Reprodutor de Música:");
-						System.out.println("1. Tocar Música");
+						System.out.println("1. Selecionar Música");
 						System.out.println("2. Pausar Música");
-						System.out.println("3. Selecionar Música");
+						System.out.println("3. Tocar Música");
 						System.out.println("0. Voltar");
 
 						n = scanner.nextInt();
 
 						switch (n) {
 						case 1:
-							iphone.playSong();
+							addPlaylistOnSystem(playlist);
+							iphone.selectMusic(playlist, scanner);
 							break;
 						case 2:
 							iphone.pauseMusic();
 							break;
 						case 3:
-							addPlaylistOnSystem(playlist);
-							iphone.selectMusic(playlist, scanner);
+							iphone.playSong();
 							break;
 						case 0:
 							System.out.println("Voltando ao menu principal.\n");
@@ -106,6 +106,9 @@ public class Program {
 							break;
 						case 2:
 							iphone.answerCall();
+							break;
+						case 3:
+							iphone.startVoiceRecording();
 							break;
 						case 0:
 							System.out.println("Voltando ao menu principal.\n");
