@@ -14,9 +14,9 @@ Este projeto é um simulador das funcionalidades de um dispositivo semelhante a 
 
 - **Telefone**: Fazer chamadas telefônicas simuladas e responder a chamadas recebidas.
 
-# Pré-requisitos
-
-- Ambiente Java configurado.
+## Proposta
+Projeto foi construído conforme diagrama a seguir: 
+![Diagrama de classe Iphone](DiagramaIphone.png)
 
 # Contribuição
 
