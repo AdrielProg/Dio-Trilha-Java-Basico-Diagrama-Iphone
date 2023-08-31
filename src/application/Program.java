@@ -3,12 +3,14 @@ package application;
 import java.util.Scanner;
 
 import model.device.IPhone;
+import model.util.ContactList;
 import model.util.MusicPlaylist;
 
 public class Program {
 	public static void main(String[] args) {
 
 		MusicPlaylist playlist = new MusicPlaylist();
+		ContactList contactList = new ContactList(); 
 
 		IPhone iphone = new IPhone();
 
@@ -21,6 +23,7 @@ public class Program {
 				System.out.println("0. Sair");
 
 				int n = scanner.nextInt();
+				
 
 				switch (n) {
 				case 1:
@@ -33,10 +36,10 @@ public class Program {
 						System.out.println("0. Voltar");
 
 						n = scanner.nextInt();
+						addPlaylistOnSystem(playlist);
 
 						switch (n) {
 						case 1:
-							addPlaylistOnSystem(playlist);
 							iphone.selectMusic(playlist, scanner);
 							break;
 						case 2:
@@ -86,20 +89,21 @@ public class Program {
 						}
 
 						if (n == 0) {
-							break; 
+							break;
 						}
 					}
 					break;
 				case 3:
 					while (true) {
-						System.out.println("Navegador da Internet:");
+						System.out.println("Telefone:");
 						System.out.println("1. Fazer chamada");
-						System.out.println("2. Receber chamada");
+						System.out.println("2. Lista de Contatos");
 						System.out.println("3. Iniciar Correio de Voz");
-
-						System.out.println("0. Voltar");
-						
-
+						System.out.println("3. Receber Chamada");
+                       	System.out.println("0. Voltar");
+                       	 
+                       	addContactListOnSystem(contactList);
+                       	
 						n = scanner.nextInt();
 
 						switch (n) {
@@ -107,7 +111,7 @@ public class Program {
 							iphone.call(scanner);
 							break;
 						case 2:
-							iphone.answerCall();
+							iphone.selectContact(contactList, scanner);
 							break;
 						case 3:
 							iphone.startVoiceRecording();
@@ -119,14 +123,14 @@ public class Program {
 							System.out.println("Opção inválida. Tente novamente.");
 						}
 						if (n == 0) {
-							break; 
+							break;
 						}
 					}
 					break;
 
 				case 0:
 					System.out.println("Saindo do programa.");
-
+                    System.exit(0);
 				default:
 					System.out.println("Opção inválida. Tente novamente.");
 				}
@@ -146,6 +150,21 @@ public class Program {
 		playlist.addMusic("Rape Me", "Nirvana");
 		playlist.addMusic("The Man Who Sold the World", "Nirvana");
 		playlist.addMusic("Breed", "Nirvana");
+	}
+
+	public static void addContactListOnSystem(ContactList contactList) {
+
+		// Adicionar 10 contatos com nomes e números brasileiros
+		contactList.addContact("Alice", 976538973);
+		contactList.addContact("Bob", 972653456);
+		contactList.addContact("Carlos", 96543234);
+		contactList.addContact("Daniela", 97365298);
+		contactList.addContact("Eduardo", 937649876);
+		contactList.addContact("Fernanda", 912239098);
+		contactList.addContact("Gabriel", 928470099);
+		contactList.addContact("Helena", 92848644);
+		contactList.addContact("Isabela", 932159876);
+		contactList.addContact("João", 933248765);
 	}
 
 }
