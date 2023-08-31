@@ -4,7 +4,7 @@ Bem-vindo ao repositório do meu projeto de Simulador de iPhone em Java. Este é
 
 # Descrição
 
-Este projeto é um simulador das funcionalidades de um dispositivo semelhante a um iPhone, implementado em Java. Ele oferece uma experiência interativa em que os usuários podem explorar funcionalidades como reprodutor de música, navegador da internet e telefone.
+Este projeto é um simulador das funcionalidades de um dispositivo semelhante a um iPhone, implementado em Java. Ele oferece uma experiência interativa em que os usuários podem explorar funcionalidades ilustrativas por console como reprodutor de música, navegador da internet e telefone.
 
 # Funcionalidades
 
@@ -12,17 +12,17 @@ Este projeto é um simulador das funcionalidades de um dispositivo semelhante a 
 
 - **Navegador da Internet**: Exibir páginas, adicionar novas abas e atualizar o conteúdo de páginas web simuladas.
 
-- **Telefone**: Fazer chamadas telefônicas simuladas e responder a chamadas recebidas.
+- **Telefone**: Fazer chamadas telefônicas simuladas, responder a chamadas recebidas e iniciar correio de voz.
 
-# Pré-requisitos
-
-- Ambiente Java configurado.
+## Proposta
+Projeto foi construído conforme diagrama a seguir: 
+![Diagrama de classe Iphone](DiagramaIphone.png)
 
 # Contribuição
 
 Contribuições são bem-vindas! Se você quiser melhorar este projeto ou reportar problemas, sinta-se à vontade para abrir problemas ou enviar solicitações de pull.
 
-**Aproveite o simulador e divirta-se explorando as funcionalidades de um "iPhone" em Java!** 📱
+**Aproveite o simulador e divirta-se explorando as ilustrações de funcionalidades de um "iPhone" em Java!** 📱
 
 
 ## Contato

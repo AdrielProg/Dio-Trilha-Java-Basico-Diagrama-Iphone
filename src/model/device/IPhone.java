@@ -5,6 +5,8 @@ import java.util.Scanner;
 import model.service.InternetBrowser;
 import model.service.MusicPlayer;
 import model.service.PhoneDevice;
+import model.util.Contact;
+import model.util.ContactList;
 import model.util.Music;
 import model.util.MusicPlaylist;
 
@@ -13,8 +15,15 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	@Override
 	public void call(Scanner sc) {
 		System.out.println("Digite o número: ");
-		long number = sc.nextLong();
+		int number = sc.nextInt();
+
 		System.out.println("Ligando para: " + number + "\n");
+
+	}
+
+	public String callSelectContact() {
+		return "Ligando para: ";
+
 	}
 
 	@Override
@@ -25,6 +34,23 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	@Override
 	public void startVoiceRecording() {
 		System.out.println("Iniciando gravação de voz\n");
+	}
+
+	@Override
+	public void selectContact(ContactList contactList, Scanner sc) {
+		contactList.showMySortedContacts();
+		System.out.println("\nEscolha um contato pelo nome para ligar: ");
+		sc.nextLine();
+		String contactName = sc.nextLine();
+
+		for (Contact contact : contactList.getContactList()) {
+
+			if (contact.getName().matches(contactName)) {
+				System.out.println(
+						callSelectContact() + " " + contact.getName() + "\n" + "Número: " + contact.getNumber() + "\n");
+			}
+		}
+
 	}
 
 	@Override
@@ -69,7 +95,7 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 		for (Music music : musicPlaylist.getPlaylist()) {
 
 			if (music.getName().matches(musicToPlay)) {
-				System.out.println(playSongSelected() + " " + music.getName()+"\n");
+				System.out.println(playSongSelected() + " " + music.getName() + "\n");
 			}
 		}
 
