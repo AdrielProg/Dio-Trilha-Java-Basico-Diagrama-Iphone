@@ -3,14 +3,14 @@ package application;
 import java.util.Scanner;
 
 import model.device.IPhone;
-import model.util.ContactList;
+import model.util.ContactSet;
 import model.util.MusicPlaylist;
 
 public class Program {
 	public static void main(String[] args) {
 
 		MusicPlaylist playlist = new MusicPlaylist();
-		ContactList contactList = new ContactList(); 
+		ContactSet contactList = new ContactSet(); 
 
 		IPhone iphone = new IPhone();
 
@@ -36,8 +36,7 @@ public class Program {
 						System.out.println("0. Voltar");
 
 						n = scanner.nextInt();
-						addPlaylistOnSystem(playlist);
-
+				
 						switch (n) {
 						case 1:
 							iphone.selectMusic(playlist, scanner);
@@ -102,7 +101,7 @@ public class Program {
 						System.out.println("3. Receber Chamada");
                        	System.out.println("0. Voltar");
                        	 
-                       	addContactListOnSystem(contactList);
+                       	
                        	
 						n = scanner.nextInt();
 
@@ -136,35 +135,6 @@ public class Program {
 				}
 			}
 		}
-	}
-
-	public static void addPlaylistOnSystem(MusicPlaylist playlist) {
-
-		playlist.addMusic("Smells Like Teen Spirit", "Nirvana");
-		playlist.addMusic("Come as You Are", "Nirvana");
-		playlist.addMusic("In Bloom", "Nirvana");
-		playlist.addMusic("Heart-Shaped Box", "Nirvana");
-		playlist.addMusic("Lithium", "Nirvana");
-		playlist.addMusic("All Apologies", "Nirvana");
-		playlist.addMusic("About a Girl", "Nirvana");
-		playlist.addMusic("Rape Me", "Nirvana");
-		playlist.addMusic("The Man Who Sold the World", "Nirvana");
-		playlist.addMusic("Breed", "Nirvana");
-	}
-
-	public static void addContactListOnSystem(ContactList contactList) {
-
-		// Adicionar 10 contatos com nomes e números brasileiros
-		contactList.addContact("Alice", 976538973);
-		contactList.addContact("Bob", 972653456);
-		contactList.addContact("Carlos", 96543234);
-		contactList.addContact("Daniela", 97365298);
-		contactList.addContact("Eduardo", 937649876);
-		contactList.addContact("Fernanda", 912239098);
-		contactList.addContact("Gabriel", 928470099);
-		contactList.addContact("Helena", 92848644);
-		contactList.addContact("Isabela", 932159876);
-		contactList.addContact("João", 933248765);
 	}
 
 }

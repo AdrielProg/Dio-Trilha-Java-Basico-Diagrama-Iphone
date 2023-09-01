@@ -5,26 +5,14 @@ import java.util.List;
 
 public class MusicPlaylist {
 
-	private String name;
+	
 	private List<Music> playlist;
 
 	public MusicPlaylist() {
 		this.playlist = new ArrayList<>();
+		addPlaylistOnSystem();
 	}
 
-	// contrutor para implementar adição de playlists personalizadas com nome;
-	public MusicPlaylist(String name) {
-		this.name = name;
-		this.playlist = new ArrayList<>();
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public List<Music> getPlaylist() {
 		return playlist;
@@ -68,4 +56,19 @@ public class MusicPlaylist {
 		}
 
 	}
+
+	public void addPlaylistOnSystem() {
+
+		addMusic("Smells Like Teen Spirit", "Nirvana");
+		addMusic("Come as You Are", "Nirvana");
+		addMusic("In Bloom", "Nirvana");
+		addMusic("Heart-Shaped Box", "Nirvana");
+		addMusic("Lithium", "Nirvana");
+		addMusic("All Apologies", "Nirvana");
+		addMusic("About a Girl", "Nirvana");
+		addMusic("Rape Me", "Nirvana");
+		addMusic("The Man Who Sold the World", "Nirvana");
+		addMusic("Breed", "Nirvana");
+	}
+
 }
