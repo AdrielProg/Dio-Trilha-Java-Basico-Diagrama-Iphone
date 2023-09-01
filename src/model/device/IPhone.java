@@ -33,11 +33,11 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	}
 
 	@Override
-	public void startVoiceRecording() {
-		Scanner sc = new Scanner(System.in);
+	public void startVoiceRecording(Scanner sc) { 
 		ContactSet contactSet = new ContactSet(); 
-		contactSet.showMySortedContacts(); 
+		contactSet.showMySortedContacts();
 		System.out.println("\nEscolha um contato pelo nome Iniciar um correio de Voz: ");
+		sc.nextLine();
 		String contactName = sc.nextLine();
 
 		for (Contact contact : contactSet.getContactList()) {
@@ -52,7 +52,8 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	}
 
 	@Override
-	public void selectContact(ContactSet contactList, Scanner sc) {
+	public void selectContact(Scanner sc) {
+		ContactSet contactList = new ContactSet();
 		contactList.showMySortedContacts();
 		System.out.println("\nEscolha um contato pelo nome para ligar: ");
 		sc.nextLine();
@@ -71,12 +72,11 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	@Override
 	public void displayPage() {
 		System.out.println("Exibindo página da web\n");
-		selectSites(new Scanner(System.in));
+		selectSites(new SitesMap(), new Scanner(System.in));
 	}
 
 	@Override
-	public void selectSites(Scanner sc) {
-		SitesMap sites = new SitesMap();
+	public void selectSites(SitesMap sites,Scanner sc) {
 		sites.showMySites();
 		System.out.println("Escolha um site por nome para navegar: ");
 		String site = sc.nextLine();
@@ -91,7 +91,7 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	@Override
 	public void addNewTab() {
 		System.out.println("Abrindo nova aba do navegador\n");
-		selectSites(new Scanner(System.in));
+		selectSites(new SitesMap(),new Scanner(System.in));
 	}
 
 	@Override
@@ -116,8 +116,8 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	}
 
 	@Override
-	public void selectMusic(MusicPlaylist musicPlaylist, Scanner sc) {
-
+	public void selectMusic (Scanner sc) {
+		MusicPlaylist musicPlaylist = new MusicPlaylist(); 
 		musicPlaylist.showMyPlaylistSong();
 		System.out.println("\nEscolha uma música pelo nome para tocar: ");
 		sc.nextLine();

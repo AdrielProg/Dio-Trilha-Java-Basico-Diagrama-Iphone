@@ -2,6 +2,8 @@ package model.service;
 
 import java.util.Scanner;
 
+import model.util.SitesMap;
+
 public interface InternetBrowser {
 
 	public void displayPage();
@@ -9,5 +11,5 @@ public interface InternetBrowser {
 	public void addNewTab();
 	
 	public void updatePage();
-	public void selectSites(Scanner sc); 
+	public void selectSites(SitesMap sites,Scanner sc); 
 }

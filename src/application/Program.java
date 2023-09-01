@@ -3,18 +3,13 @@ package application;
 import java.util.Scanner;
 
 import model.device.IPhone;
-import model.util.ContactSet;
-import model.util.MusicPlaylist;
 
 public class Program {
 	public static void main(String[] args) {
 
-		MusicPlaylist playlist = new MusicPlaylist();
-		ContactSet contactList = new ContactSet(); 
-
 		IPhone iphone = new IPhone();
-
 		try (Scanner scanner = new Scanner(System.in)) {
+
 			while (true) {
 				System.out.println("Escolha uma opção:");
 				System.out.println("1. Acessar Reprodutor de Música");
@@ -23,7 +18,6 @@ public class Program {
 				System.out.println("0. Sair");
 
 				int n = scanner.nextInt();
-				
 
 				switch (n) {
 				case 1:
@@ -36,10 +30,10 @@ public class Program {
 						System.out.println("0. Voltar");
 
 						n = scanner.nextInt();
-				
+
 						switch (n) {
 						case 1:
-							iphone.selectMusic(playlist, scanner);
+							iphone.selectMusic(scanner);
 							break;
 						case 2:
 							iphone.pauseMusic();
@@ -99,10 +93,8 @@ public class Program {
 						System.out.println("2. Lista de Contatos");
 						System.out.println("3. Iniciar Correio de Voz");
 						System.out.println("3. Receber Chamada");
-                       	System.out.println("0. Voltar");
-                       	 
-                       	
-                       	
+						System.out.println("0. Voltar");
+
 						n = scanner.nextInt();
 
 						switch (n) {
@@ -110,10 +102,10 @@ public class Program {
 							iphone.call(scanner);
 							break;
 						case 2:
-							iphone.selectContact(contactList, scanner);
+							iphone.selectContact(scanner);
 							break;
 						case 3:
-							iphone.startVoiceRecording();
+							iphone.startVoiceRecording(scanner);
 							break;
 						case 0:
 							System.out.println("Voltando ao menu principal.\n");
@@ -129,7 +121,7 @@ public class Program {
 
 				case 0:
 					System.out.println("Saindo do programa.");
-                    System.exit(0);
+					System.exit(0);
 				default:
 					System.out.println("Opção inválida. Tente novamente.");
 				}

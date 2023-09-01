@@ -2,8 +2,6 @@ package model.service;
 
 import java.util.Scanner;
 
-import model.util.MusicPlaylist;
-
 public interface MusicPlayer {
 	
 	
@@ -11,7 +9,7 @@ public interface MusicPlayer {
 	
 	public void pauseMusic();
 	
-	public void selectMusic(MusicPlaylist msc, Scanner sc);
+	public void selectMusic(Scanner sc);
 
 	public String playSongSelected();
 }
