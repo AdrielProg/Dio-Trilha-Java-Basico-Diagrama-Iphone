@@ -16,7 +16,7 @@ Este projeto é um simulador das funcionalidades de um dispositivo semelhante a 
 
 ## Proposta
 Projeto foi construído conforme diagrama a seguir: 
-![Diagrama de classe Iphone](DiagramaIphone.png)
+![Diagrama de classe Iphone](IphoneDiagram.drawio.png)
 
 # Contribuição
 
