@@ -10,5 +10,5 @@ public interface PhoneDevice {
 	
 	public void startVoiceRecording(Scanner sc);
 
-	void selectContact(Scanner sc);
+	public void selectContact(Scanner sc);
 }
