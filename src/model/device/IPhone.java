@@ -16,7 +16,7 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 	@Override
 	public void call(Scanner sc) {
 		System.out.println("Digite o número: ");
-		int number = sc.nextInt();
+		long number = sc.nextLong();
 
 		System.out.println("Ligando para: " + number + "\n");
 
@@ -34,7 +34,21 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 
 	@Override
 	public void startVoiceRecording() {
-		System.out.println("Iniciando gravação de voz\n");
+		Scanner sc = new Scanner(System.in);
+		ContactSet contactSet = new ContactSet(); 
+		contactSet.showMySortedContacts(); 
+		System.out.println("\nEscolha um contato pelo nome Iniciar um correio de Voz: ");
+		String contactName = sc.nextLine();
+
+		for (Contact contact : contactSet.getContactList()) {
+
+			if (contact.getName().matches(contactName)) {
+						System.out.println("Iniciando gravação de voz para:\n");
+						System.out.println(contact.getName() 
+						+ "\n" + "Número: " + contact.getNumber() + "\n");
+			}
+		}
+		
 	}
 
 	@Override
