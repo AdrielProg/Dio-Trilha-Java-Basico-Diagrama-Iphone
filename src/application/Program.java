@@ -32,7 +32,7 @@ public class Program {
 						System.out.println("Reprodutor de Música:");
 						System.out.println("1. Selecionar Música");
 						System.out.println("2. Pausar Música");
-						System.out.println("3. Tocar Música");
+						System.out.println("4. Tocar Música");
 						System.out.println("0. Voltar");
 
 						n = scanner.nextInt();
