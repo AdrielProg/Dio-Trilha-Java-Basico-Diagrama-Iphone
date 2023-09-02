@@ -29,7 +29,7 @@ public class IPhone implements MusicPlayer, InternetBrowser, PhoneDevice {
 
 	@Override
 	public void answerCall() {
-		System.out.println("Atendendo chamada");
+		System.out.println("Atendendo chamada\n");
 	}
 
 	@Override

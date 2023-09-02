@@ -26,7 +26,7 @@ public class Program {
 						System.out.println("Reprodutor de Música:");
 						System.out.println("1. Selecionar Música");
 						System.out.println("2. Pausar Música");
-						System.out.println("4. Tocar Música");
+						System.out.println("3. Tocar Música");
 						System.out.println("0. Voltar");
 
 						n = scanner.nextInt();
@@ -86,13 +86,13 @@ public class Program {
 						}
 					}
 					break;
-				case 3:
+				case 3: // Menu do Navegador do Telefone
 					while (true) {
 						System.out.println("Telefone:");
 						System.out.println("1. Fazer chamada");
 						System.out.println("2. Lista de Contatos");
 						System.out.println("3. Iniciar Correio de Voz");
-						System.out.println("3. Receber Chamada");
+						System.out.println("4. Receber Chamada");
 						System.out.println("0. Voltar");
 
 						n = scanner.nextInt();
@@ -106,6 +106,9 @@ public class Program {
 							break;
 						case 3:
 							iphone.startVoiceRecording(scanner);
+							break;
+						case 4:
+							iphone.answerCall();
 							break;
 						case 0:
 							System.out.println("Voltando ao menu principal.\n");
